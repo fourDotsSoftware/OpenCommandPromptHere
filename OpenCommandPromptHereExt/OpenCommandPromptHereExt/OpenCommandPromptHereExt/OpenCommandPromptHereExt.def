@@ -1,0 +1,10 @@
+; OpenCommandPromptHereExt.def : Declares the module parameters.
+
+LIBRARY      "OpenCommandPromptHereExt.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+	

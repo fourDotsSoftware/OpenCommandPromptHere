@@ -1,0 +1,35 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {51E71264-75A5-4a8e-A7FC-F474603F7A01} = s 'OpenCommandPromptHereShellExt Class'
+		{			
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}			
+		}
+	}
+		
+	NoRemove *
+    {
+        NoRemove ShellEx
+        {
+            NoRemove ContextMenuHandlers
+            {
+                ForceRemove OpenCommandPromptHere = s '{51E71264-75A5-4a8e-A7FC-F474603F7A01}'
+            }
+        }
+    }
+    
+    NoRemove Folder
+    {
+        NoRemove ShellEx
+        {
+            NoRemove ContextMenuHandlers
+            {
+                ForceRemove OpenCommandPromptHere = s '{51E71264-75A5-4a8e-A7FC-F474603F7A01}'
+            }
+        }
+    }
+}

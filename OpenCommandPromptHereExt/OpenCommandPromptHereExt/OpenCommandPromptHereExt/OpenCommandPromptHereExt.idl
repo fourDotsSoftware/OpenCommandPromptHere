@@ -1,0 +1,36 @@
+// OpenCommandPromptHereExt.idl : IDL source for OpenCommandPromptHereExt
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (OpenCommandPromptHereExt.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	//uuid(39809273-18E9-4058-86C6-49BF635BD36E),
+	uuid(7F062A2E-DA80-4c1d-90D0-4E625ECBF50A),
+	helpstring("IOpenCommandPromptHereShellExt Interface"),
+	pointer_default(unique)
+]
+interface IOpenCommandPromptHereShellExt : IUnknown{
+};
+[
+	//uuid(43F35A7B-DC07-4455-AD7F-FFE2D55EF97A),
+	uuid(4FAEB550-654F-441c-9CF0-2E9E52F9143F),
+	version(1.0),
+	helpstring("OpenCommandPromptHereExt 1.0 Type Library")
+]
+library OpenCommandPromptHereExtLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(51E71264-75A5-4a8e-A7FC-F474603F7A01),
+		helpstring("OpenCommandPromptHereShellExt Class")
+	]
+	coclass OpenCommandPromptHereShellExt
+	{
+		[default] interface IOpenCommandPromptHereShellExt;
+	};
+};
